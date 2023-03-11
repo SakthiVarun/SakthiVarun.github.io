@@ -1,6 +1,6 @@
 import React from "react";
 import './styles/style.css';
-import 'https://kit.fontawesome.com/4b9ba14b0f.js';
+
 
 function NotFound() {
   return (
