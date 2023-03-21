@@ -1,5 +1,5 @@
 import ReactParticles from 'react-tsparticles';
-// import { useThemeContext } from "../hooks/themeHook";
+//import { useThemeContext } from "../hooks/themeHook";
 
 const LIGHT_THEME_PARTICLES = {
   number: {
@@ -55,7 +55,7 @@ const LIGHT_THEME_PARTICLES = {
   },
 };
 
-const DARK_THEME_PARTICLES = {
+export const DARK_THEME_PARTICLES = {
   number: {
     value: 100,
     density: {
@@ -81,12 +81,17 @@ const DARK_THEME_PARTICLES = {
 };
 
 function Particle() {
+  // const { dark } = useThemeContext();
 
+
+  // const particles = dark
+  //   ? DARK_THEME_PARTICLES
+  //   : LIGHT_THEME_PARTICLES;
 
   return (
     <ReactParticles
       params={{
-        options: DARK_THEME_PARTICLES,
+        // particles: particles,
         interactivity: {
           events: {
             onclick: {

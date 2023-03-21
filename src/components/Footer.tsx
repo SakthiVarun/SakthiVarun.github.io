@@ -15,7 +15,8 @@ function Footer() {
         <Col md="4" />
 
         <Col md="4" className="footer-copyright">
-          <h3>Copyright © {year} Massimiliano Pronesti</h3>
+          {/* <h3>Copyright © {year}</h3> */}
+          <h3>Contact me through</h3>
         </Col>
 
         <Col md="4" className="footer-body">
@@ -23,7 +24,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 className="footer-social-icons"
-                href="https://github.com/mspronesti"
+                href="https://github.com/sakthivarun"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -33,7 +34,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 className="footer-social-icons"
-                href="https://www.linkedin.com/in/massimiliano-pronesti/"
+                href="https://www.linkedin.com/in/sakthi-varun-hariharan"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,7 +44,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 className="footer-social-icons"
-                href="mailto:massimiliano.pronesti@gmail.com"
+                href="mailto:hsv552000@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -53,7 +54,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 className="footer-social-icons"
-                href="https://t.me/E_ll3"
+                href="https://t.me/HSV_sakthi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
