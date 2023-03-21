@@ -4,47 +4,34 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
+  DiHtml5,
   DiPython,
-  DiRust,
-  DiSpark,
+  DiAngularSimple,
+  DiCss3Full,
+  DiDotnet,
+  DiSass,
 } from "react-icons/di";
-import { 
-  SiCplusplus,
-  SiPytorch, 
-  SiTensorflow, 
-  SiFirebase, 
-  SiQiskit, 
-  SiScikitlearn,
-  SiGnubash
-} from "react-icons/si";
-
-
+import { SiCplusplus, SiCsharp, SiMicrosoftsharepoint } from "react-icons/si";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {
-        [
-          <SiCplusplus />,
-          <DiPython />,
-          <DiJavascript1 />,
-          <DiNodejs />,
-          <DiReact />,
-          <DiMongodb />,
-          <SiScikitlearn />,
-          <SiQiskit />,
-          <SiPytorch />,
-          <SiTensorflow />,
-          <SiFirebase />,
-          <DiSpark />,
-          <DiRust />,
-          <SiGnubash/>         
-        ].map(tool => 
-          <Col xs={4} md={2} className="tech-icons">
-            {tool}
-          </Col>)
-      }
+      {[
+        <DiHtml5 />,
+        <DiCss3Full />,
+        <DiSass />,
+        <DiJavascript1 />,
+        <DiReact />,
+        <DiNodejs />,
+        <DiAngularSimple />,
+        <DiDotnet />,
+        <SiCplusplus />,
+        <DiPython />,
+      ].map((tool) => (
+        <Col xs={4} md={2} className="tech-icons">
+          {tool}
+        </Col>
+      ))}
     </Row>
   );
 }

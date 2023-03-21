@@ -83,18 +83,18 @@ function NavBar() {
           </Col>
           
           <Col className="col-sm-4">
-          <Dropdown 
+          {/* <Dropdown 
             onSelect={e => changeLanguage(e)}
           >
             <Dropdown.Toggle id="dropdown-basic">
               <MdLanguage style={{ fontSize: "26px"}}/> {lang.toUpperCase()}
             </Dropdown.Toggle>
           
-            {/* <Dropdown.Menu>
+            <Dropdown.Menu>
               <Dropdown.Item eventKey="en">EN</Dropdown.Item>
               <Dropdown.Item eventKey="it">IT</Dropdown.Item>
-            </Dropdown.Menu> */}
-          </Dropdown> 
+            </Dropdown.Menu>
+          </Dropdown>  */}
           </Col>
 
         </Row>       

@@ -3,19 +3,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
+import { AiFillFire } from "react-icons/ai";
+
 import bayesnet from "../../assets/Projects/bayesnet.jpg";
 import quantum from "../../assets/Projects/quantum.png";
-import diffusers from "../../assets/Projects/diffusers2.jpg"
+import diffusers from "../../assets/Projects/diffusers2.jpg";
 import portfolio from "../../assets/Projects/portfolio.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
   const { t } = useTranslation();
-  
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
+        <h2>There is more yet to come</h2>
+      </Container>
+
+      {/* <Container>
         <h1 className="project-heading">
           {t('ProjHeader')} <strong className="green">{t('Works')} </strong>
         </h1>
@@ -61,7 +67,7 @@ function Projects() {
             />
           </Col>         
         </Row>
-      </Container>
+      </Container> */}
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { FaHandPointRight } from "react-icons/fa";
+import { BsArrowRightShort } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 function AboutCard() {
   const  { t } = useTranslation();
@@ -10,9 +10,9 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-          {t('Greeting')} {t('Im')} <span className="green">Massimiliano Pronesti</span>, {t('MLE')} {t('IWorkAt')} <span className="green">{t('Company')}</span> {t('CompanyLocation')}.
+          {t('Greeting')} {t('Im')} <span className="green">Sakthi Varun</span>, {t('I work at')} <span className="green">{t('Avasoft')}</span> {t('Chennai')}.
             <br/>
-            {t('IHoldDegree1')} <span className="green">Computer Science Engineering</span> {t('School1')} {t('And')} <span className="green">Data Science and Engineering</span> {t('School2')}.
+            {t('I hold')} <span className="green">Electronics and Communication</span> {t('Degree')} {t('And experience in')} <span className="green">Providing Soluions</span>.
             
             <br/>
             <br/>
@@ -20,16 +20,16 @@ function AboutCard() {
           </p>
           <ul>
             <li className="about-activity">
-              <FaHandPointRight /> Machine Learning
+              <BsArrowRightShort /> Video Games
             </li>
             <li className="about-activity">
-              <FaHandPointRight /> High-Performance Computing
+              <BsArrowRightShort /> Music
             </li>
             <li className="about-activity">
-              <FaHandPointRight /> Quantum Computing
+              <BsArrowRightShort /> Coding
             </li>
             <li className="about-activity">
-              <FaHandPointRight /> Software Engineering
+              <BsArrowRightShort /> Software Engineering
             </li>
           </ul>
 
