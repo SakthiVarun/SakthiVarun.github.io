@@ -1,48 +1,46 @@
-export{}
+import { createContext, useEffect, useState, useContext } from 'react';
 
-// import { createContext, useEffect, useState, useContext } from 'react';
+const DARK_LOCAL_STORAGE_KEY = 'dark';
 
-// const DARK_LOCAL_STORAGE_KEY = 'dark';
+export const ThemeContext = createContext({
+  dark: true,
+  toggleTheme: () => {},
+});
 
-// export const ThemeContext = createContext({
-//   dark: true,
-//   toggle: () => {},
-// });
+export const ThemeProvider = ({ children }) => {
+  const [dark, setDark] = useState(true); // dark by default
 
-// export const ThemeProvider = ({ children }) => {
-//   const [dark, setDark] = useState(true); // dark by default
+  const toggleTheme = () => {
+    localStorage.setItem(
+      DARK_LOCAL_STORAGE_KEY,
+      JSON.stringify(!dark),
+    );
+    setDark(!dark);
 
-//   const toggleTheme = () => {
-//     localStorage.setItem(
-//       DARK_LOCAL_STORAGE_KEY,
-//       JSON.stringify(!dark),
-//     );
-//     setDark(!dark);
+    document.body.classList.toggle('dark', !dark);
+    document.body.classList.toggle('light', dark);
+  };
 
-//     document.body.classList.toggle('dark', !dark);
-//     document.body.classList.toggle('light', dark);
-//   };
+  useEffect(() => {
+    const localeValue = JSON.parse(
+      localStorage.getItem(DARK_LOCAL_STORAGE_KEY)||'{}'
+    );
 
-//   useEffect(() => {
-//     const localeValue = JSON.parse(
-//       localStorage.getItem(DARK_LOCAL_STORAGE_KEY)||'{}'
-//     );
+    if (!localeValue) {
+      document.body.classList.add('dark');
+    } else {
+      setDark(localeValue);
+      document.body.classList.add(localeValue ? 'dark' : 'light');
+    }
+  }, []);
 
-//     if (!localeValue) {
-//       document.body.classList.add('dark');
-//     } else {
-//       setDark(localeValue);
-//       document.body.classList.add(localeValue ? 'dark' : 'light');
-//     }
-//   }, []);
+  return (
+    <ThemeContext.Provider value={{ dark, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-//   return (
-//     <ThemeContext.Provider value={{ dark, toggleTheme }}>
-//       {children}
-//     </ThemeContext.Provider>
-//   );
-// };
-
-// export const useThemeContext = () => {
-//   return useContext(ThemeContext);
-// };
+export const useThemeContext = () => {
+  return useContext(ThemeContext);
+};

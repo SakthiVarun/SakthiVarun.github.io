@@ -10,7 +10,7 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-          {t('Greeting')} {t('Im')} <span className="green">Sakthi Varun</span>, {t('I work at')} <span className="green">{t('Avasoft')}</span> {t('Chennai')}.
+          {t('Greeting')} {t('Im')} <span className="green">H. Sakthi Varun</span>, {t('I work at')} <span className="green">{t('Avasoft')}</span> {t('Chennai')}.
             <br/>
             {t('I hold')} <span className="green">Electronics and Communication</span> {t('Degree')} {t('And experience in')} <span className="green">Providing Soluions</span>.
             
