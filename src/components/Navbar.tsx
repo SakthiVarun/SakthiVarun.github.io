@@ -79,11 +79,11 @@ function NavBar() {
         { !expand &&  
         <Row>
           <Col className="col-sm-4">
-          <BtnToggleTheme className={undefined}/> 
+          <BtnToggleTheme/> 
           </Col>
           
-          <Col className="col-sm-4">
-          {/* <Dropdown 
+          {/* <Col className="col-sm-4">
+          <Dropdown 
             onSelect={e => changeLanguage(e)}
           >
             <Dropdown.Toggle id="dropdown-basic">
@@ -94,8 +94,8 @@ function NavBar() {
               <Dropdown.Item eventKey="en">EN</Dropdown.Item>
               <Dropdown.Item eventKey="it">IT</Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>  */}
-          </Col>
+          </Dropdown> 
+          </Col> */}
 
         </Row>       
         }  
