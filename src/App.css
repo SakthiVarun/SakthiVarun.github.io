@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+span.profession {
+  color: #10bbbb;
+  font-size: 25px;
+  font-weight: 500;
+}

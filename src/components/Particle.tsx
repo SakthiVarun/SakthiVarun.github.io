@@ -84,28 +84,29 @@ function Particle() {
   const { dark } = useThemeContext();
   console.log("line 84 - particle", dark);
 
-  const particles = dark ? DARK_THEME_PARTICLES : LIGHT_THEME_PARTICLES;
+  const particles = dark ?  LIGHT_THEME_PARTICLES : DARK_THEME_PARTICLES;
 
   return (
-    <ReactParticles
-      params={{
-        options: particles,
-        interactivity: {
-          events: {
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-          modes: {
-            push: {
-              particles_nb: 1,
-            },
-          },
-        },
-        retina_detect: true,
-      }}
-    />
+    // <ReactParticles
+    //   params={{
+    //     options: particles,
+    //     interactivity: {
+    //       events: {
+    //         onclick: {
+    //           enable: true,
+    //           mode: "push",
+    //         },
+    //       },
+    //       modes: {
+    //         push: {
+    //           particles_nb: 1,
+    //         },
+    //       },
+    //     },
+    //     retina_detect: true,
+    //   }}
+    // />
+    <></>
   );
 }
 
