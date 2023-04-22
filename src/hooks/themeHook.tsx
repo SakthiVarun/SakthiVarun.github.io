@@ -8,7 +8,7 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [dark, setDark] = useState(true); // dark by default
+  const [dark, setDark] = useState(false); // dark by default
 
   const toggleTheme = () => {
     localStorage.setItem(
@@ -25,13 +25,13 @@ export const ThemeProvider = ({ children }) => {
     const localeValue = JSON.parse(
       localStorage.getItem(DARK_LOCAL_STORAGE_KEY)||'{}'
     );
-
-    if (!localeValue) {
-      document.body.classList.add('dark');
-    } else {
-      setDark(localeValue);
-      document.body.classList.add(localeValue ? 'dark' : 'light');
-    }
+    document.body.classList.add('dark');
+    // if (!localeValue) {
+    //   document.body.classList.add('dark');
+    // } else {
+    //   setDark(localeValue);
+    //   document.body.classList.add(localeValue ? 'dark' : 'light');
+    // }
   }, []);
 
   return (

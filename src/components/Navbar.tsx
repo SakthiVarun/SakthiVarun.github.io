@@ -79,7 +79,7 @@ function NavBar() {
         { !expand &&  
         <Row>
           <Col className="col-sm-4">
-          <BtnToggleTheme/> 
+          {/* <BtnToggleTheme/>  */}
           </Col>
           
           {/* <Col className="col-sm-4">
